@@ -112,18 +112,6 @@
 		(assert (vue-mom (moment-defuzzify ?vue)))
 )
 
-(defrule ventanas
-(declare (salience 2))
-	(ventanas ?vent)
-	=>
-	(if (< ?vent 3)
-	then
-	(assert (vue-dif more-or-less bajo)))
-	(if (> ?vent 5)
-	then
-	(assert (vue-dif very alto)))
-)
-
 
 (deffunction inicio()
 	(reset)
@@ -135,6 +123,12 @@
 	(fuzzify edad ?Cedad 0.1)
 	(printout t"Introduzca el numero de ventanas en la vivienda " crlf)
 	(bind ?Cventanas (read))
+	(if (< ?Cventanas 3)
+	then
+	(assert (vue-dif more-or-less bajo)))
+	(if (> ?Cventanas 5)
+	then
+	(assert (vue-dif very alto)))
 	(assert (vivienda (categoria ?Ccategoria) (edad ?Cedad) (ventanas ?Cventanas) ))
 	(run)
 )
