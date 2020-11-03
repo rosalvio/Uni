@@ -1,0 +1,32 @@
+﻿  Source.cpp
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(29,44): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(30,45): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(35,57): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(36,57): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(38,54): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(252,37): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(8,63): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(9,63): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(19,28): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(23,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(23,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(24,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(24,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(30,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(30,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(31,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(31,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(48,25): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(48,22): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(49,35): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(52,38): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(62,25): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(62,22): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(63,36): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract3\Source.cpp(66,37): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  Generando código
+  1 of 6 functions (16.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  Pract3.vcxproj -> F:\Uni\Uni\2020-SGI\Practicas\Pract3\\Pract3.exe

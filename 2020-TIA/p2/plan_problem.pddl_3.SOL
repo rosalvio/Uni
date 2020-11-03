@@ -1,0 +1,28 @@
+
+; Version LPG-td-1.0
+; Seed 79946702
+; Command line: lpg-td -o domain.pddl -f problem.pddl -n 50 
+; Problem problem.pddl
+; Time 0.00
+; Search time 0.00
+; Parsing time 0.00
+; Mutex time 0.00
+; Quality 102.70
+
+
+Time 0.00
+
+0.0003:   (COMPRAR-TICKET-TREN PEDRO) [2.0000]
+0.0005:   (COMPRAR-TICKET-TREN JUAN) [2.0000]
+2.0008:   (VIAJAR-TREN PEDRO E B) [30.0000]
+2.0010:   (VIAJAR-TREN JUAN A E) [50.0000]
+0.0012:   (VIAJAR-BUS ANA D A) [120.0000]
+0.0015:   (VIAJAR-BUS MARIA C B) [40.0000]
+0.0018:   (COMPRAR-TICKET-TREN MARIA) [2.0000]
+40.0020:   (VIAJAR-TREN MARIA B E) [20.0000]
+0.0022:   (COMPRAR-TICKET-TREN EVA) [2.0000]
+2.0025:   (VIAJAR-TREN EVA C A) [20.0000]
+20.0028:   (COMPRAR-TICKET-TREN EVA) [2.0000]
+22.0030:   (VIAJAR-TREN EVA A D) [30.0000]
+
+

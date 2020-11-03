@@ -1,0 +1,17 @@
+
+; Version LPG-td-1.0
+; Seed 70729404
+; Command line: /cygdrive/f/Uni/Uni/2020-TIA/p2/lpg-td -o domain.pddl -f problemaSimple.pddl -quality C:\Users\balon\AppData\Local\Temp\domain-9184XX71fpkyYgZQ.pddl C:\Users\balon\AppData\Local\Temp\problem-9184D3va0U0PYQle.pddl 
+; Problem problemaSimple.pddl
+; Time 0.02
+; Plan generation time 0.00
+; Search time 0.00
+; Parsing time 0.00
+; Mutex time 0.00
+; Quality 56.00
+
+
+Time 0.02
+
+
+

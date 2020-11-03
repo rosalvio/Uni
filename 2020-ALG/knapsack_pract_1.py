@@ -29,17 +29,17 @@ def knapsack_forward(W, v, w):
             2) El número de estados activos que ha explorado hasta acabar (TODO).
     """
     Vcurr = {0:0.}
-    n_states = 1 # CAMBIAR Y COMPLETAR DONDE CORRESPONDA
+    
 
     for vi, wi in zip(v, w):
         Vnext = {}
         for peso, benef in Vcurr.items():
             Vnext[peso] = max(benef, Vnext.get(peso, 0))
-            n_states = n_states + 1
             if peso + wi <= W:
                 Vnext[peso+wi] = max(benef+vi, Vnext.get(peso+wi, 0))
 
         Vcurr = Vnext
+        n_states = len(v) * len(Vcurr) # CAMBIAR Y COMPLETAR DONDE CORRESPONDA
         
 
     return max(Vcurr.values()), n_states
@@ -79,13 +79,13 @@ def sparse_knapsack(W, v, w):
         return resul
 
     col = [(0,0)]
-    n_states = 1 # CAMBIAR ESTO Y COMPLETAR DONDE CORRESPONDA
+
 
     for vi,wi in zip(v,w):
         # cada iteración es una etapa o columna de PD
         col = merge(col, [(weight+wi,value+vi) for (weight,value) in col if weight+wi<=W])
-        n_states = n_states + 1
-
+        
+    n_states = len(v) * i
     return max(v for (w,v) in col), n_states
 
 def generateKnapsack(N,W):
@@ -167,7 +167,7 @@ def measure_knapsack_functions():
                 measures[functname][n_obj].append((t,nstates))
                 # muestra para cada ejecución una serie de valores:
                 
-                #print(n_obj, i, functname, t, maxval, nstates)
+                print(n_obj, i, functname, t, maxval, nstates)
 
     # COMPLETAR:
     # - comprueba que para un mismo n_obj e instancia (valor de i) el valor maxval

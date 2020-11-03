@@ -1,3 +1,5 @@
+; Jose Antonio Mira Garcia
+; Inicio del programa mediante funcion (inicio)
 (deffunction fuzzify (?fztemplate ?value ?delta)
  (bind ?low (get-u-from ?fztemplate))
  (bind ?hi (get-u-to ?fztemplate))
@@ -46,8 +48,8 @@
 	(slot categoria (type INTEGER))
 	(slot edad (type INTEGER))
 	(slot ventanas (type INTEGER))
-	(slot vue-max (type INTEGER))
-	(slot vue-mom (type INTEGER))
+	(slot vue-max (type FLOAT))
+	(slot vue-mom (type FLOAT))
 )
 
 
@@ -117,10 +119,10 @@
 	(reset)
 	(printout t"Introduzca la categoria de la vivienda " crlf)
 	(bind ?Ccategoria (read))
-	(fuzzify categoria ?Ccategoria 0.1)
+	(fuzzify categoria ?Ccategoria 0)
 	(printout t"Introduzca la edad de la vivienda " crlf)
 	(bind ?Cedad (read))
-	(fuzzify edad ?Cedad 0.1)
+	(fuzzify edad ?Cedad 0)
 	(printout t"Introduzca el numero de ventanas en la vivienda " crlf)
 	(bind ?Cventanas (read))
 	(if (< ?Cventanas 3)

@@ -1,0 +1,8 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=610C1FC9
+eax=0885EEE0 ebx=8885EEE8 ecx=61105B18 edx=80000013 esi=00000001 edi=0885EED8
+ebp=80000010 esp=0094C7A0 program=F:\Uni\Uni\2020-TIA\p2\lpg-td.exe, pid 9756, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+ 488453 [main] lpg-td 9756 _cygtls::handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+ 590060 [main] lpg-td 9756 _cygtls::handle_exceptions: Error while dumping state (probably corrupted stack)

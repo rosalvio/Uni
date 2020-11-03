@@ -1,0 +1,14 @@
+{
+    "pddlPlanner.executionTarget": "Output window",
+    "pddl.validatorPath": "f:\\Uni\\Uni\\2020-TIA\\p2\\lpg-td.exe",
+    "pddl.planners": [
+        {
+            "kind": "COMMAND",
+            "path": "F:/Uni/Uni/2020-TIA/p2/lpg-td.exe",
+            "title": "lpg-td.exe #6",
+            "canConfigure": true
+        }
+    ],
+    "pddl.selectedPlanner": "lpg-td.exe #6",
+    "pddlPlanner.executableOrService": "lpg-td.exe -o domain.pddl -f problem.pddl -quality"
+}
