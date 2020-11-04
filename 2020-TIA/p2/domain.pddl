@@ -8,17 +8,20 @@
 (:types ;todo: enumerate types and their hierarchy here, e.g. car truck bus - vehicle
     persona
     ciudad
+    bicicleta
     - object
 )
 
 
 (:predicates ;todo: define predicates here
-    (at ?p - persona ?c - ciudad)
+    (at ?p - (either persona bicicleta) ?c - ciudad)
     (residente ?p - persona)
     (tiene-ticket ?p - persona)
     (conexion-bus ?c1 - ciudad ?c2 - ciudad)
     (conexion-metro ?c1 - ciudad ?c2 - ciudad)
     (conexion-tren ?c1 - ciudad ?c2 - ciudad)
+    (bici ?p - persona)
+    (ticket-bici ?p - persona)
 
 )
 
@@ -32,7 +35,7 @@
     (precio-tren)
     (viajes-bono ?p - persona)
     (dinero-persona ?p - persona)
-    (coste-total)
+    (coste-total)   
 )
 
 ;define actions here
@@ -62,6 +65,28 @@
         (at end (at ?p ?c2))
         (at start (not (at ?p ?c1)))
         (at end (decrease(viajes-bono ?p) 1))
+    )
+)
+
+(:durative-action viajar-tren-bici
+    :parameters (?p - persona ?c1 - ciudad ?c2 - ciudad ?b - bicicleta)
+    :duration (= ?duration (/ (distancia-ciudades ?c1 ?c2) (velocidad-tren)))
+    :condition (and 
+        (at start (at ?p ?c1))
+        (at start (at ?b ?c1))
+        (over all (conexion-tren ?c1 ?c2)) 
+        (at start (tiene-ticket ?p))
+        (at start (ticket-bici ?p))
+        
+    )
+    :effect (and 
+        (at end (at ?p ?c2))
+        (at start (not (at ?p ?c1)))
+        (at end (at ?b ?c2))
+        (at start (not (at ?b ?c1)))
+        (at end (not (tiene-ticket ?p)))
+        (at end (not (ticket-bici ?p)))
+        
     )
 )
 
@@ -111,6 +136,21 @@
         
     )
 )
+
+(:durative-action subir-bici
+    :parameters (?p - persona)
+    :duration (= ?duration 1)
+    :condition (and 
+        (at start (bici ?p))
+        (at start (tiene-ticket ?p))
+    )
+    :effect (and 
+        (at end (ticket-bici ?p))
+        (at end (increase (coste-total) 1))
+        (at end (decrease (dinero-persona ?p) 1))
+    )
+)
+
 
 
 )

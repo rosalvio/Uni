@@ -64,10 +64,13 @@ do
 
     % M step: parameter update
     % HERE YOUR CODE FOR PARAMETER ESTIMATION
+    sumz = sum(z);
     pkGc{ic} =  sum(zk)/Nc; % hay que sumar por columnas
-    mu{ic} = Xc'*zk ./ sum(zk)
+    mu{ic} = Xc'*zk ./ sum(zk);
     for k = 1:K
-      sigma(ic,k) = (Xc-(mu{ic}*k)')'*(zk*Xc-(mu{ic}*k)')
+      covmat = ((Xc-mu{ic}(:,k)')' * (z(:,k).*(Xc-mu{ic}(:,k)')))/sumz(k);
+      % D x D           D x N   aplicar a cada elemento   N x D
+      sigma(ic,k) = alpha * covmat +(1-alpha)*eye(D);
     end
 
     

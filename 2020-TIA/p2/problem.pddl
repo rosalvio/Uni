@@ -10,6 +10,8 @@ maria - persona
 eva - persona
 ana - persona
 pedro - persona
+bPedro - bicicleta
+bJuan - bicicleta
 )
 
 (:init
@@ -120,6 +122,10 @@ pedro - persona
     (=(distancia-ciudades E D) 160)
 
 
+    (at bPedro E)
+    (at bJuan A)
+    (bici pedro)
+    (bici juan)
 
 
     
@@ -135,5 +141,5 @@ pedro - persona
 ))
 
 ;un-comment the following line if metric is needed
-(:metric minimize (+ (* 0.8(total-time)) (* 0.2 (coste-total))))
+(:metric minimize (total-time))
 )

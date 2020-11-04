@@ -4,11 +4,10 @@
     "pddl.planners": [
         {
             "kind": "COMMAND",
-            "path": "F:/Uni/Uni/2020-TIA/p2/lpg-td.exe",
-            "title": "lpg-td.exe #6",
+            "path": "lpg-td.exe -o domain.pddl -f problem.pddl -quality",
+            "title": "lpg-td.exe -o domain.pddl -f problem.pddl -quality #2",
             "canConfigure": true
         }
     ],
-    "pddl.selectedPlanner": "lpg-td.exe #6",
-    "pddlPlanner.executableOrService": "lpg-td.exe -o domain.pddl -f problem.pddl -quality"
+    "pddl.selectedPlanner": "lpg-td.exe -o domain.pddl -f problem.pddl -quality #2"
 }
