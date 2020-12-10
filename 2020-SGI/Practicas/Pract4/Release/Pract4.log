@@ -10,17 +10,19 @@ F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(9,63): warning C4305: 'inicializ
 F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(10,49): warning C4305: 'inicializando': truncamiento de 'double' a 'const float'
 F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(11,49): warning C4305: 'inicializando': truncamiento de 'double' a 'const float'
 F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(12,49): warning C4305: 'inicializando': truncamiento de 'double' a 'const float'
-F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(29,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(29,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(30,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(30,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(36,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(36,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(37,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(37,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(31,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(31,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(32,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(32,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(38,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(38,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(39,42): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(39,24): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(53,37): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract4\Source.cpp(90,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
   Generando código
-  1 of 6 functions (16.7%) were compiled, the rest were copied from previous compilation.
+  3 of 13 functions (23.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Generación de código finalizada
   Pract4.vcxproj -> F:\Uni\Uni\2020-SGI\Practicas\Pract4\\Pract4.exe
