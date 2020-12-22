@@ -4,7 +4,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <OutDir>$(ProjectDir)\</OutDir>
-    <IncludePath>F:\Uni\Uni\2020-SGI\pract1\;$(IncludePath)</IncludePath>
+    <IncludePath>F:\Uni\Uni\2020-SGI\pract1\GL;F:\Uni\Uni\2020-SGI\pract1\;F:\Uni\Uni\2020-SGI\pract1\freeimage;$(IncludePath)</IncludePath>
     <LibraryPath>F:\Uni\Uni\2020-SGI\pract1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup>

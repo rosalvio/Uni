@@ -1,0 +1,61 @@
+﻿  Source.cpp
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(29,44): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(30,45): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(35,57): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(36,57): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(38,54): warning C4305: 'inicializando': truncamiento de 'double' a 'const GLfloat'
+F:\Uni\Uni\2020-SGI\pract1\Utilidades.h(252,37): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(20,33): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(21,31): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(22,24): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(30,43): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(31,46): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(36,33): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(40,62): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(50,16): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(179,23): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(198,23): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(207,15): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,24): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,44): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,40): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,40): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,61): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,61): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,80): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,76): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,76): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,98): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,98): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,117): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,113): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,113): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,135): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,135): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,155): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,151): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(299,151): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(307,27): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(308,35): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(308,35): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(308,57): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(308,57): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(309,35): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(309,35): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(309,57): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(309,57): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(313,34): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(315,35): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(316,34): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(318,35): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(321,68): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(321,46): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(347,30): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+F:\Uni\Uni\2020-SGI\Practicas\Pract9\Source.cpp(362,40): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+  Generando código
+  3 of 39 functions ( 7.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  Pract9.vcxproj -> F:\Uni\Uni\2020-SGI\Practicas\Pract9\Pract9.exe
