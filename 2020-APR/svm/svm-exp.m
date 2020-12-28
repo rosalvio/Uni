@@ -1,21 +1,34 @@
 #!/usr/bin/octave --no-gui
 
-if (nargin!=7)
-printf("Usage: mixgaussian-exp.m <trdata> <trlabels> <pcaKs> <Ks> <alphas> <%%trper> <%%dvper>\n")
+if (nargin!=3 or nargin!=2)
+printf("Usage: mixgaussian-exp.m <C> <t> <d>\n")
+printf("Usage: mixgaussian-exp.m <C> <t>\n")
 exit(1);
 end;
-
+addpath('../svm_apr');
 arg_list=argv();
-trdata=arg_list{1};
-trlabs=arg_list{2};
-pcaKs=str2num(arg_list{3});
-Ks=str2num(arg_list{4});
-trper=str2num(arg_list{5});
-alphas=str2num(arg_list{6});
-dvper=str2num(arg_list{7});
+trdata="../data/mnist/train-images-idx3-ubyte.mat.gz";
+trlabs="../data/mnist/train-labels-idx1-ubyte.mat.gz";
+C=arg_list{1};
+t=arg_list{2};
+if (nargin == 3)
+d=arg_list{3};
+args = cstrcat("-t ", t, " -c ", C, " -d", d);
+end;
+
+if (nargin == 2)
+args = cstrcat("-t ", t, " -c ", C);
+end;
+
+trper=90;
+dvper=10;
 
 load(trdata);
 load(trlabs);
+res = svmtrain(xl, X, args)
+
+svmpredict()
+
 
 N=rows(X);
 seed=23; rand("seed",seed); permutation=randperm(N);
@@ -26,7 +39,7 @@ Ndv=round(dvper/100*N);
 Xtr=X(1:Ntr,:); xltr=xl(1:Ntr);
 Xdv=X(N-Ndv+1:N,:); xldv=xl(N-Ndv+1:N);
 
-printf("\n  alpha pca Ks dv-err");
+printf("\n   C     t   d   err");
 printf("\n------- --- --- ------\n");
 
 % Vectores de proyeccion en w estan por columnas
@@ -46,6 +59,3 @@ for i=1:length(alphas)
         end;
     end;
 end;
-
-
-

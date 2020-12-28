@@ -1,4 +1,4 @@
-#!/usr/bin/octave --no-gui
+#!/usr/bin/octave
 
 if (nargin!=6)
 printf("Usage: mixgaussian-exp.m <trdata> <trlabels> <Ks> <alphas> <%%trper> <%%dvper>\n")
@@ -30,7 +30,7 @@ printf("\n------- --- ------\n");
 
 for i=1:length(alphas)
     for j=1:length(Ks)
-        edv(i,j) = mixgaussian(Xtr,xltr,Xdv,xldv, Ks(j),alphas(i));
+        edv = mixgaussian(Xtr,xltr,Xdv,xldv, Ks(j),alphas(i));
         printf("%.1e %3d %6.3f\n",alphas(i),Ks(j),edv);
     end;
 end;
