@@ -16,12 +16,11 @@ float A = 8, T = 100;
 float giro = 0.0, velocidad = 0;
 GLuint texturas[5];
 bool arriba = false, abajo = false, izquierda = false, derecha = false;
-bool MODO_ALAMBRICO = false, MODO_LUZ = false, MODO_NIEBLA = false, MODO_SOLIDARIO = false;
+bool MODO_ALAMBRICO = false, MODO_LUZ = false, MODO_NIEBLA = false, MODO_SOLIDARIO = false, camaraArriba = false;
 float incrementovelocidad = 0.05;
 float incrementoGiro = PI / 90;
 float rozamiento = 0.01;
 GLint anchura = 4; // anchura de la carretera
-bool camaraArriba = false;
 
 GLint distanciacarteles = 40;
 
@@ -147,7 +146,7 @@ void onSpecialKey(int tecla, int xp, int yp) {
 
 void onKey(unsigned char letra, int xp, int yp) {
 	switch (letra) {
-	case 's':
+	case 'a':
 		MODO_ALAMBRICO = !MODO_ALAMBRICO;
 		break;
 	case 'l':
@@ -158,10 +157,10 @@ void onKey(unsigned char letra, int xp, int yp) {
 		break;
 	case 27:
 		exit(0);
-	case 'c':
+	case 's':
 		MODO_SOLIDARIO = !MODO_SOLIDARIO;
 		break;
-	case 'a':
+	case 'c':
 		camaraArriba = !camaraArriba;
 		break;
 	}
@@ -173,6 +172,7 @@ void onKey(unsigned char letra, int xp, int yp) {
 
 void hud() {
 	if (MODO_ALAMBRICO) {
+		// Cambia de color segun la velocidad en modo alambrico
 			glPushMatrix();
 			glTranslatef(-0.75, -0.75, -2);
 			glScalef(0.25, 0.2 * velocidad, 0);
@@ -203,9 +203,9 @@ void hud() {
 
 void carretera() {
 	//Dibujo Carretera dinamica 
-	float inicio = x - 20, vfseno = func(inicio);
+	float inicio = x - 20, funct = func(inicio);
 	float derivada = deriv(inicio);
-	GLfloat precalculo[3] = { inicio,0,vfseno };
+	GLfloat precalculo[3] = { inicio,0,funct };
 	GLfloat tz[3] = { -derivada,0,1 };
 	GLfloat normales[3] = { (1 / sqrt(1 + derivada * derivada)) * tz[0] , 0 ,(1 / sqrt(1 + derivada * derivada)) * tz[2] };
 
@@ -215,9 +215,9 @@ void carretera() {
 	}
 	for (int i = 1; i < 100; i++) {
 		float aux = inicio + i;
-		vfseno = func(aux);
+		funct = func(aux);
 		float derivada = deriv(aux);
-		GLfloat precalculo2[3] = { aux,0,vfseno };
+		GLfloat precalculo2[3] = { aux,0,funct };
 		GLfloat tz[3] = { -derivada,0,1 };
 		GLfloat normales2[3] = { (1 / sqrt(1 + derivada * derivada)) * tz[0] , 0 ,(1 / sqrt(1 + derivada * derivada)) * tz[2] };
 		for (int i = 0; i < 3; i++) {
@@ -330,15 +330,15 @@ void display() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
-	//MODO Alambrico --> activa modo sin luces ni texturas
+	//MODO Alambrico
 
 	if (MODO_ALAMBRICO) {
-		glDisable(GL_LIGHTING); //desactivamos las luces
-		glDisable(GL_TEXTURE_2D); // desactivamos las texturas
+		glDisable(GL_LIGHTING); 
+		glDisable(GL_TEXTURE_2D); 
 	}
 	else {
-		glEnable(GL_LIGHTING); //activamos las luces
-		glEnable(GL_TEXTURE_2D); // activamos las texturas
+		glEnable(GL_LIGHTING); 
+		glEnable(GL_TEXTURE_2D); 
 	}
 	if (MODO_NIEBLA) {
 		glEnable(GL_FOG);
@@ -356,7 +356,7 @@ void display() {
 	carteles();
 
 	glLoadIdentity();
-	if (!camaraArriba) dibujaVehiculo(); // Como esta antes del lookat va pegado a la camara
+	if (!camaraArriba) dibujaVehiculo();
 	//Faros
 	GLfloat posl1[] = { 0.5, 0.9, -5, 2.0 };
 	GLfloat dir_centrall1[] = { 0.0, -1.0, -1.0 };
@@ -370,7 +370,7 @@ void display() {
 	if (!camaraArriba)
 		gluLookAt(x, y, z, 10 * sin(giro) + x, 0, 10 * cos(giro) + z, 0, 1, 0);
 	else
-		gluLookAt(x, 100, z, 10 * sin(giro) + x, 0, 10 * cos(giro) + z, 0, 1, 0);
+		gluLookAt(x, 50, z, 10 * sin(giro) + x, 0, 10 * cos(giro) + z, 0, 1, 0);
 
 	carretera();
 
@@ -409,10 +409,10 @@ int main(int argc, char** argv) {
 	glutTimerFunc(25, onTimer, 25);
 
 	cout << "flechas arriba / abajo --> acelerar / decelerar " << endl << "flechas izquierda / derecha --> girar"
-		<< endl << "s --> activa / desactiva modo alambrico" << endl << "l --> diurno / nocturno "
+		<< endl << "a --> activa / desactiva modo alambrico" << endl << "l --> diurno / nocturno "
 		<< endl << "n--> activa / desactiva niebla" << endl <<
-		"c --> activa objeto solidario a la camara" << endl <<
-		"a --> situa la camara arriba" << endl;
+		"s --> activa objeto solidario a la camara" << endl <<
+		"c --> situa la camara arriba" << endl;
 
 	glutMainLoop();
 	FreeImage_DeInitialise();
