@@ -1,7 +1,7 @@
 #!/usr/bin/octave -qf
 
 if (nargin!=5)
-printf("Usage: pca+knn-exp.m <trdata> <trlabels> <ks> <%%trper> <%%dvper>\n")
+printf("Usage: pca+gaussian-exp.m <trdata> <trlabels> <ks> <%%trper> <%%dvper>\n")
 exit(1);
 end;
 
@@ -24,15 +24,7 @@ Ndv=round(dvper/100*N);
 Xtr=X(1:Ntr,:); xltr=xl(1:Ntr);
 Xdv=X(N-Ndv+1:N,:); xldv=xl(N-Ndv+1:N);
 
-%
-% HERE YOUR CODE
-%
-
-% Calcula el error sin aplicar PCA (eliminado del .out)
-printf("\n err-No-PCA");
-printf("\n--------\n");
-[errNo] = knn(Xtr, xltr, Xdv, xldv, 1);
-printf("%6.3f", errNo);
+alphas = [1e-9 1e-8 1e-7 1e-6 1e-5 1e-4 1e-3 1e-2 1e-1 9e-1];
 
 printf("\n    Ks    err-PCA");
 printf("\n--------   --------\n");
@@ -43,6 +35,8 @@ for i=1:length(ks)
 	WPCA = W(:, 1:ks(i));
 	XR = pcaTr * WPCA;
 	YR = pcaTest * WPCA;
-	[errPCA] = knn(XR, xltr, YR, xldv, 1);
-	printf("%3d %6.3f\n", ks(i), errPCA);
+	for alpha=alphas
+		[errPCA] = gaussian(XR, xltr, YR, xldv, alpha);
+		printf("%3d %3d %6.3f\n", ks(i), alpha, errPCA);
+	endfor;
 end;
