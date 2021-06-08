@@ -18,11 +18,28 @@ for e=1:columns(epsilons)
 		xn=sum(Xtr(i,:));
 		xnd=sum(sum(Xtr(i,:)));
 		auxpost=xn/xnd;
+    
 		
-		% Suavizazdo de Laplace
+		
 		if(epsilons(e) !=0)
-			wc=[wc;log((auxpost+epsilons(e))/(sum(auxpost+epsilons(e))))];
-			wc0=[wc0;log(pri(c))];
+      % Suavizazdo de Laplace
+			% wc=[wc;log((auxpost+epsilons(e))/(sum(auxpost+epsilons(e))))];
+			% wc0=[wc0;log(pri(c))];
+      %Suavizado descuento absoluto
+      Pg = [];
+      wc = [wc;(auxpost)/(sum(auxpost))];
+      wc0 = [wc0; pri(c)];
+      for i=1:columns(Xtr)
+        Pg = [Pg sum(Xtr(:,i))/sum(sum(Xtr))];
+      endfor
+      Pg
+      for i=1:rows(wc)
+        Pc = wc(i, :);
+        aux = ones(1, columns(Pc))*epsilons(e);
+        w2c(i,:) = Pc - aux + sum(aux)*Pg;
+        w2c
+      endfor
+      w2c
 		else
       wc = [wc;(auxpost)/(sum(auxpost))];
       wc0 = [wc0; pri(c)];
